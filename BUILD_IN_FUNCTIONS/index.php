@@ -7,14 +7,18 @@
 </head>
 <body>
     <?php  
-    $tasks = [
-        "laundry" => "Daniel",
-        "trash" =>"Frida",
-        "vacuum" =>"Basse",
-        "dishes" =>"Bella"
-    ];
+     
+     $string = "Hello World!";
+     //echo strlen($string);
+     //echo strpos($string, "o");
+     //echo str_replace("World!", "Daniel", $string)
+     //echo strtolower($string)
+     //echo strtoupper($string);
+     //echo substr($string, 2, -2);
+     //print_r(explode(" ", $string));
 
-    echo $tasks["laundry"];
+
+
     ?>
 </body>
 </html>
