@@ -17,12 +17,22 @@
      //echo substr($string, 2, -2);
      //print_r(explode(" ", $string));
 
-     $number = -5.5;
+    //$number = -5.5;
      //echo abs($number);
      //echo round($number);
      //echo pow(2, 3); //kubi
      //echo sqrt(2); //fesvi
      //echo rand(1, 100);
+
+     //$array = ["apple", "banana", "orange"];
+     //echo count($array);
+     //echo is_array($array);
+     //echo array_push($array, "kiwi");
+     //array_pop($array);
+     //array_reverse($array);
+    //array_merge($array1, $array2); merge together arrays
+
+
 
 
 
