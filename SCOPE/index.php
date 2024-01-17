@@ -25,18 +25,29 @@
 
 //    echo myFunction();
 
-  $test = "Daniel";
+//   $test = "Daniel";
 
-  function myFunction() {
-    static $staticVar= 0;
+//   function myFunction() {
+//     static $staticVar= 0;
 
-    $staticVar++;
+//     $staticVar++;
 
-    return $staticVar;
+//     return $staticVar;
+//   }
+
+//   echo myFunction();
+//   echo myFunction();
+
+  class MyClass
+  {
+    public $classVar = "Hello, World!";
+
+    public function myMethod(){
+        echo $this->classVar;
+    }
   }
 
-  echo myFunction();
-  echo myFunction();
+ 
 
    ?> 
 </body>
