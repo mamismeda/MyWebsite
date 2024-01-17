@@ -1,3 +1,7 @@
+<?php 
+declare(strict_types=1);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +12,7 @@
 <body>
     <?php 
     
-    function sayHello($name) {
+    function sayHello(string $name) {
         return "Hello " . $name ." !";
     }
 
