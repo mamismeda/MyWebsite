@@ -12,9 +12,11 @@ declare(strict_types=1);
 <body>
     <?php 
     
+    $test = "Daniel";
     function calculator(int $num01, int $num02) {
+        global $test;
         $result = $num01 + $num02;
-        return $result;
+        return $test;
     }
 
     $test = calculator(2, 5);
