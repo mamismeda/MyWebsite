@@ -12,13 +12,31 @@
 
 //    echo $test;
 
-   function myFunction() {
-    $localvar = "hellom world";
+//    $test = "Daniel";
 
-    return $localvar;
-   }
+//      function myFunction() {
 
-   echo $localvar;
+//     global $test;
+
+//     $localvar = "hellom world";
+
+//     return $test;
+//    }
+
+//    echo myFunction();
+
+  $test = "Daniel";
+
+  function myFunction() {
+    static $staticVar= 0;
+
+    $staticVar++;
+
+    return $staticVar;
+  }
+
+  echo myFunction();
+  echo myFunction();
 
    ?> 
 </body>
