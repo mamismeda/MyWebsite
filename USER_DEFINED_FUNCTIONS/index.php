@@ -12,11 +12,12 @@ declare(strict_types=1);
 <body>
     <?php 
     
-    function sayHello(string $name) {
-        return "Hello " . $name ." !";
+    function calculator(int $num01, int $num02) {
+        $result = $num01 + $num02;
+        return $result;
     }
 
-    $test = sayHello("Alex");
+    $test = calculator(2, 5);
     echo $test;
 
     
