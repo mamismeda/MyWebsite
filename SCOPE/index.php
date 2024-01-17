@@ -38,14 +38,20 @@
 //   echo myFunction();
 //   echo myFunction();
 
-  class MyClass
-  {
-    public $classVar = "Hello, World!";
+//   class MyClass
+//   {
+//     public $classVar = "Hello, World!";
 
-    public function myMethod(){
-        echo $this->classVar;
-    }
-  }
+//     public function myMethod(){
+//         echo $this->classVar;
+//     }
+//   }
+
+$name = "Daniel";
+echo $name;
+
+define("PI", 3.14);
+echo PI;
 
  
 
