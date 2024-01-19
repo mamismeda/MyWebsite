@@ -79,10 +79,10 @@
 
   // } while ($test <10);
   
-  $fruits = array("apple", "banana", "orange");
-  
-  foreach ($fruits as $fruit) {
-    echo "this is a " . $fruit . "<br>";
+  $fruits = array("apple" => "red", "banana" => "yellow", "orange" => "orange");
+
+  foreach ($fruits as $fruit => $color) {
+    echo "this is a " . $fruit . ", that has a color of " . $color . "<br>";
   }
   ?>
 
