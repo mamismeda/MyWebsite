@@ -68,8 +68,15 @@
 
   //  }
 
-  for ($i = 0; $i <= 10; $i++) {
-    echo "This is iteration n umber " . $i . "<br>";
+  // for ($i = 0; $i <= 10; $i++) {
+  //   echo "This is iteration n umber " . $i . "<br>";
+  // }
+
+  $test = 5;
+  while ($test < 10) {
+    echo $test;
+    $test ++;
+
   }
   
   ?>
