@@ -72,13 +72,18 @@
   //   echo "This is iteration n umber " . $i . "<br>";
   // }
 
-  $test = 10;
-  do {
-    echo $test;
-    $test ++;
+  // $test = 10;
+  // do {
+  //   echo $test;
+  //   $test ++;
 
-  } while ($test <10);
+  // } while ($test <10);
   
+  $fruits = array("apple", "banana", "orange");
+  
+  foreach ($fruits as $fruit) {
+    echo "this is a " . $fruit . "<br>";
+  }
   ?>
 
 </body>
