@@ -72,12 +72,12 @@
   //   echo "This is iteration n umber " . $i . "<br>";
   // }
 
-  $test = 5;
-  while ($test < 10) {
+  $test = 10;
+  do {
     echo $test;
     $test ++;
 
-  }
+  } while ($test <10);
   
   ?>
 
