@@ -47,11 +47,13 @@
 //     }
 //   }
 
-$name = "Daniel";
-echo $name;
+// $name = "Daniel";
+// echo $name;
 
-define("PI", 3.14);
-echo PI;
+// define("PI", 3.14);
+// echo PI;
+
+
 
  
 

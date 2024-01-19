@@ -20,53 +20,57 @@
 </form>
     
   <?php 
-   if($_SERVER["REQUEST_METHOD"] == "POST"){
-    // Grab data from inputs
-      $num01 = filter_input(INPUT_POST, "num01", FILTER_SANITIZE_NUMBER_FLOAT);
-      $num02 = filter_input(INPUT_POST, "num02", FILTER_SANITIZE_NUMBER_FLOAT);
-      $operator = htmlspecialchars($_POST["operator"]);
+  //  if($_SERVER["REQUEST_METHOD"] == "POST"){
+  //   // Grab data from inputs
+  //     $num01 = filter_input(INPUT_POST, "num01", FILTER_SANITIZE_NUMBER_FLOAT);
+  //     $num02 = filter_input(INPUT_POST, "num02", FILTER_SANITIZE_NUMBER_FLOAT);
+  //     $operator = htmlspecialchars($_POST["operator"]);
       
 
-      // Error handlers
-      $errors = false;
+  //     // Error handlers
+  //     $errors = false;
 
-      if (empty($num01) || empty($num02) || empty($operator)) {
-         echo "fill in all fields";
-         $errors = true;
-      }
+  //     if (empty($num01) || empty($num02) || empty($operator)) {
+  //        echo "fill in all fields";
+  //        $errors = true;
+  //     }
 
-      if(!is_numeric($num01) || !is_numeric($num02)) {
-          echo "only write numbers";
-          $erros = true;
-      }
+  //     if(!is_numeric($num01) || !is_numeric($num02)) {
+  //         echo "only write numbers";
+  //         $erros = true;
+  //     }
 
-      // Calculate the numbers if no errors
-      if(!$errors){
-        $value = 0;
+  //     // Calculate the numbers if no errors
+  //     if(!$errors){
+  //       $value = 0;
 
-          switch ($operator) {
-            case "add":
-              $value = $num01 + $num02;
-               break;
-            case "subtract":
-              $value = $num01 - $num02;
-                 break;
+  //         switch ($operator) {
+  //           case "add":
+  //             $value = $num01 + $num02;
+  //              break;
+  //           case "subtract":
+  //             $value = $num01 - $num02;
+  //                break;
 
-            case "multiply":
-              $value = $num01 * $num02;
-                   break;
+  //           case "multiply":
+  //             $value = $num01 * $num02;
+  //                  break;
 
-            case "divide":
-                $value = $num01 / $num02;
-                     break;
-            default : 
-             echo "Something went wrong!";
-          }
+  //           case "divide":
+  //               $value = $num01 / $num02;
+  //                    break;
+  //           default : 
+  //            echo "Something went wrong!";
+  //         }
 
-          echo "Result = " . $value . "";      
-        }
+  //         echo "Result = " . $value . "";      
+  //       }
 
-   }
+  //  }
+
+  for ($i = 0; $i <= 10; $i++) {
+    echo "This is iteration n umber " . $i . "<br>";
+  }
   
   ?>
 
