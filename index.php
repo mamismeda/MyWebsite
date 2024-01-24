@@ -9,22 +9,13 @@
 
 <body>
 
-  <h3> Change account</h3>
-
-  <form action="includes/userupdate.inc.php" method="post">
-    <input type="text" name="username" placeholder="username">
-    <input type="password" name="pwd" placeholder="password">
-    <input type="text" name="email" placeholder="E-Mail">
-    <button>Update</button>
+  <form action="search.php" method="post">
+    <label for="search">Search for user :</label>
+    <input type="text" id="search" name="usersearch" placeholder="search...">
+    <button>Search</button>
   </form>
 
-  <h3> Delete ACcount</h3>
-
-  <form action="includes/userdelete.inc.php" method="post">
-    <input type="text" name="username" placeholder="username">
-    <input type="password" name="pwd" placeholder="password">
-    <button>Delete</button>
-  </form>
+   
 
 </body>
 
