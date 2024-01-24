@@ -9,13 +9,21 @@
 
 <body>
 
-  <h3> Signup</h3>
+  <h3> Change account</h3>
 
-  <form action="includes/formhandler.inc.php" method="post">
+  <form action="includes/userupdate.inc.php" method="post">
     <input type="text" name="username" placeholder="username">
     <input type="password" name="pwd" placeholder="password">
     <input type="text" name="email" placeholder="E-Mail">
-    <button>Signup</button>
+    <button>Update</button>
+  </form>
+
+  <h3> Delete ACcount</h3>
+
+  <form action="includes/userdelete.inc.php" method="post">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="pwd" placeholder="password">
+    <button>Delete</button>
   </form>
 
 </body>
