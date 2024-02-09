@@ -1,26 +1,22 @@
 <?php 
 
-  $sensitiveData = "Krossing";
-  $salt = bin2hex(random_bytes(16)); // Generate random salt
-  $pepper = "ASecretPepperString";
+$pwdSignup = "Krossing";
+
+$options = [
+    'cost' => 12
+];
+
+$hashedPwd = password_hash($pwdSignup, PASSWORD_BCRYPT, $options);
 
 
-  $dataToHash = $sensitiveData . $salt . $pepper;
-  $hash = hash("sha256", $dataToHash);
+$pwdLogin = "Krossing2";
+password_verify($pwdLogin, $hashedPwd);
 
-
-  $sensitiveData = "Krossing";
-
-  $storedSalt = $salt;
-  $storedHash = $hash;
-  $pepper = "ASecretPepperString";
-
-  $dataToHash = $sensitiveData . $storedSalt . $pepper;
-
-  $verificationHash = hash("sha256", $dataToHash);
-
-if ($storedHash === $verificationHash) {
-    echo "The data ar the same!"
+if (password_verify($pwdLogin, $hashedPwd)) {
+    echo "They are the same!";
 } else {
-    echo "The data are not the same!"
+    echo "They are not the same!";
 }
+
+
+
