@@ -2,9 +2,9 @@
 
 session_start();
 
-$_SESSION["username"] = "Krossing";
-
+unset($_SESSION["username"]);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +15,7 @@ $_SESSION["username"] = "Krossing";
 </head>
 <body>
 
-  <?php 
+<?php 
    echo $_SESSION["username"];
   ?>
     
