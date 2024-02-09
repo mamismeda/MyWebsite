@@ -4,9 +4,7 @@ session_start();
 
 $_SESSION["username"] = "Krossing";
 
-//delete all session data
-session_unset();
-
+session_destroy();
 ?>
 
 <!DOCTYPE html>
