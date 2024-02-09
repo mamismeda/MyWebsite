@@ -2,6 +2,7 @@
 
 session_start();
 
+//delete on session of data
 unset($_SESSION["username"]);
 ?>
 
