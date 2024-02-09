@@ -9,10 +9,11 @@
 
 <body>
 
-  <form action="search.php" method="post">
-    <label for="search">Search for user :</label>
-    <input type="text" id="search" name="usersearch" placeholder="search...">
-    <button>Search</button>
+  <form action="includes/formhandler.inc.php" method="post">
+    <input type="text" name="username" placeholder="Username">
+    <input type="text" name="pwd" placeholder="Password">
+    <input type="text" name="email" placeholder="E-Mail">
+    <button>Signup</button>
   </form>
 
    
