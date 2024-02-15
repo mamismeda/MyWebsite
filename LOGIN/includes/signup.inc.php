@@ -11,6 +11,9 @@
         require_once ' singup_contr.inc.php';
 
         //Error hanlders 
+        if(is_input_empty($username, $pwd, $email)) {
+
+        }
         
 
      } catch (PDOException $e) {

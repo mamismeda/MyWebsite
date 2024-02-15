@@ -10,3 +10,13 @@ function is_input_empty($username, $pwd, $email)
       return false;
    }
 }
+
+function is_email_invalid($email)
+{
+   // buildin email validation
+   if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      return true;
+   } else {
+      return false;
+   }
+}
