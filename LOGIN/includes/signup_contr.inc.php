@@ -21,9 +21,9 @@ function is_email_invalid(string $email)
    }
 }
 
-function is_username_taken(string $username)
+function is_username_taken(object $pdo, string $username)
 {
-   if() {
+   if(get_username($pdo, $username)) {
       return true;
    }else{
      return false;
