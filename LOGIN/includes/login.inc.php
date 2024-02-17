@@ -12,9 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             //Error hanlders 
       $errors = [];
 
-      if (is_input_empty($username, $pwd, $email)) {
+      if (is_input_empty($username, $pwd)) {
          $errors["empty_input"] = "fill in all fields!";
       }
+
+      $result = get_user($pdo, $username);
 
       require_once 'config_session.inc.php';
 
