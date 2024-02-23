@@ -30,15 +30,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($errors) {
             $_SESSION['errors_signup'] = $errors;
 
-            $signupData = [
-                "username" => $username,
-                "email" => $email
-            ];
-            $_SESSION['signup_data'] = $signupData;
-
             header("Location : ../index.php");
             die();
         }
+
+        $newSessionId = session_create_id();
+        $sessionId = $newSessionId . "_" . $result["id"];
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());
     }
