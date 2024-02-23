@@ -36,6 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $newSessionId = session_create_id();
         $sessionId = $newSessionId . "_" . $result["id"];
+        session_id($sessionId);
+        
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());
     }
