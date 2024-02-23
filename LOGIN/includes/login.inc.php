@@ -9,35 +9,36 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         require_once 'login_model.inc.php';
         require_once 'login_contr.inc.php';
 
-            //Error hanlders 
-      $errors = [];
+        //Error hanlders 
+        $errors = [];
 
-      if (is_input_empty($username, $pwd)) {
-         $errors["empty_input"] = "fill in all fields!";
-      }
+        if (is_input_empty($username, $pwd)) {
+            $errors["empty_input"] = "fill in all fields!";
+        }
 
-      $result = get_user($pdo, $username);
+        $result = get_user($pdo, $username);
 
-      if (is_username_wrong($result)){
-        $errors["login_incorrect"] = "Incorrect login info";
-      }
+        if (is_username_wrong($result)) {
+            $errors["login_incorrect"] = "Incorrect login info";
+        }
+        if (!is_username_wrong($result) && is_password_wrong($pwd, $result["pwd"])) {
+            $errors["login_incorrect"] = "Incorrect login info";
+        }
 
-      require_once 'config_session.inc.php';
+        require_once 'config_session.inc.php';
 
-      if ($errors) {
-         $_SESSION['errors_signup'] = $errors;
+        if ($errors) {
+            $_SESSION['errors_signup'] = $errors;
 
-         $signupData = [
-            "username" => $username,
-            "email" => $email
-         ];
-      $_SESSION['signup_data'] = $signupData;
+            $signupData = [
+                "username" => $username,
+                "email" => $email
+            ];
+            $_SESSION['signup_data'] = $signupData;
 
-         header("Location : ../index.php");
-         die();
-      }
-
-
+            header("Location : ../index.php");
+            die();
+        }
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());
     }
