@@ -18,6 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
       $result = get_user($pdo, $username);
 
+      if (is_username_wrong($result)){
+        $errors["login_incorrect"] = "Incorrect login info";
+      }
+
       require_once 'config_session.inc.php';
 
       if ($errors) {
