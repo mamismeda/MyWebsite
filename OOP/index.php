@@ -9,14 +9,11 @@
 
 <body>
 
-    <?php
-    require_once 'Classes/Car.php';
-
-    $car01 = new Car("BMW", "green");
-    $car01->setBrand("Volvo");
-    $car01->setColor("white");
-    echo $car01->getColor();
-    ?>
+    <form action="includes/signup.inc.php" method="post">
+        <input type="text" name="username">
+        <input type="text" name="pwd">
+        <button>Signup</button>
+    </form>
 
 
 </body>
