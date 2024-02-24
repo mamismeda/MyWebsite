@@ -11,5 +11,14 @@ class Signup extends Dbh
         $this->pwd = $pwd;
     }
 
+  
 
+    private function insertUser()
+    {
+        $query = "INSERT INTO users ('username', 'pwd') VALUES (:username, :pwd);";
+        $stmt = parent::connect()->prepare($query);
+        $stmt->bindParam(":username", $this->username);
+        $stmt->bindParam(":pwd", $this->pwd);
+        $stmt->execute();
+    }
 }
