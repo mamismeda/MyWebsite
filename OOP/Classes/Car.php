@@ -5,7 +5,7 @@ class Car
     // Properties / Fields
     private $brand;
     private $color;
-    public $vehicleType = "car";
+    private $vehicleType = "car";
 
     // Contsructor
     public function __construct($brand, $color = "none")
@@ -14,10 +14,14 @@ class Car
         $this->color = $color;
     }
 
-    // Method
+    // Getter & setter methods
     
+
+    // Method
+    public function getCarInfo() {
+        return "Brand" . $this->brand . ", Color: " . $this->color; 
+    }
 }
 
-$car01 = new Car("Volvo", "Green");
 
 
